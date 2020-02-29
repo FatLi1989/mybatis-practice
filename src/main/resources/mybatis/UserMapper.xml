@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.novli.mybatis.mapper.UserMapper">
+
+
+    <select id="selectByPrimaryKey" resultType="com.novli.mybatis.pojo.User">
+        select id, wx_id, wx_nickname, roles, avatar_url, create_time, update_time, bonus
+        from user where id = #{id,jdbcType=VARCHAR}
+    </select>
+</mapper>
