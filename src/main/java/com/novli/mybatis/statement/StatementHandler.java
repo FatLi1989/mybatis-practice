@@ -31,7 +31,6 @@ public class StatementHandler {
 
         preparedStatement.execute();
 
-
         return resultHandler.handle(preparedStatement, method);
     }
 }
